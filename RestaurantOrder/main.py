@@ -4,17 +4,22 @@ menu = {
     "Chicken nuggets",
     "Tea",
     "Coffee",
-    "Latte"
+    "Latte",
+    "Exit"
 }
 
 print("Hello,you have 20$ to spend")
 
 def main():
     print("Menu: \n Coke - 2$ \nPizza - 10$ \nChicken nuggets - $8 \nTea - 3$ \nCoffee - 3$ \nLatte - 5$")
+    print("\nTo finish your order type: Exit")
     money_left = 20
 
     while(money_left > 0):
-        user_choice = (input("What would you like to order:"))
+        user_choice = (input("\nWhat would you like to order:"))
+        if user_choice == "Exit":
+            print("Goodbye!")
+            break
         if user_choice == "Coke":
             money_left -= 2
             print("Current receipt: ", 2, "$")
@@ -34,6 +39,14 @@ def main():
             money_left -= 5
             print("Current receipt: ", 5, "$")
     
-    print("Not enough money to continue")
-        
+    while(money_left <= 0):
+        print("Not enough money to continue")
+        break
 main()
+
+
+#to do:
+
+#exit option
+
+#validation for user money
