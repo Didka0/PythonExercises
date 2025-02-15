@@ -22,31 +22,48 @@ def main():
             break
         if user_choice == "Coke":
             money_left -= 2
-            print("Current receipt: ", 2, "$")
+            if money_left < 0:
+                break
+            else:
+                print("Current receipt: ", 2, "$")
+                continue
         elif user_choice == "Pizza":
             money_left -= 10
-            print("Current receipt: ", 10, "$")
+            if money_left <= 0:
+                break
+            else:
+                print("Current receipt: ", 10, "$")
+                continue
         elif user_choice == "Chicken nuggets":
             money_left -= 8
-            print("Current receipt: ", 8, "$")
+            if money_left <= 0:
+                break
+            else:
+                print("Current receipt: ", 8, "$")
+                continue
         elif user_choice == "Tea":
             money_left -= 3
-            print("Current receipt: ", 3, "$")
+            if money_left <= 0:
+                break
+            else:
+                print("Current receipt: ", 3, "$")
+                continue
         elif user_choice == "Coffee":
             money_left -= 3
-            print("Current receipt: ", 3, "$")
+            if money_left <= 0:
+                break
+            else:
+                print("Current receipt: ", 3, "$")
+                continue
         elif user_choice == "Latte":
             money_left -= 5
-            print("Current receipt: ", 5, "$")
+            if money_left <= 0:
+                break
+            else:
+                print("Current receipt: ", 5, "$")
+                continue
     
     while(money_left <= 0):
         print("Not enough money to continue")
         break
 main()
-
-
-#to do:
-
-#exit option
-
-#validation for user money
