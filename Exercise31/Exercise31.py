@@ -1,6 +1,6 @@
 import random
 
-for cards in range (1,5):
+for _ in range (1,5):
     cards = ["jack", "queen", "king"]
     random.shuffle(cards)
     for card in cards:
